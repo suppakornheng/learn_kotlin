@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AddDataActivity">
+
+    <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="เพิ่มเบอร์ฉุกเฉิน"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+            android:id="@+id/edtText_org_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:hint="ชื่อหน่วยงาน"
+            android:inputType="text"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView1"
+            app:layout_constraintStart_toStartOf="@+id/textView1"
+            app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <EditText
+            android:id="@+id/edtText_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="เบอร์โทร"
+            android:inputType="phone"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/edtText_org_name"
+            app:layout_constraintStart_toStartOf="@+id/edtText_org_name"
+            app:layout_constraintTop_toBottomOf="@+id/edtText_org_name" />
+
+    <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="ตกลง"
+            app:layout_constraintEnd_toEndOf="@+id/edtText_phone"
+            app:layout_constraintStart_toStartOf="@+id/edtText_phone"
+            app:layout_constraintTop_toBottomOf="@+id/edtText_phone" />
+
+    <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="ย้อนกลับ"
+            app:layout_constraintEnd_toEndOf="@+id/btn_ok"
+            app:layout_constraintStart_toStartOf="@+id/btn_ok"
+            app:layout_constraintTop_toBottomOf="@+id/btn_ok" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
