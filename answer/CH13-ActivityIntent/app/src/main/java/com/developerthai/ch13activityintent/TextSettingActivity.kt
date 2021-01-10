@@ -11,6 +11,7 @@ class TextSettingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_text_setting)
 
+        showToast("Text Create")
         val size = intent.getIntExtra("size", 14)
         val color = intent.getStringExtra("color")
         val styles = intent.getStringArrayListExtra("styles")
@@ -71,7 +72,35 @@ class TextSettingActivity : AppCompatActivity() {
         }
 
     }
+    override fun onStart() {
+        super.onStart()
+        showToast("Text Start")
+    }
 
+    override fun onResume() {
+        super.onResume()
+        showToast("Text Resume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        showToast("Text Pause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        showToast("Text Stop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        showToast("Text Destroy")
+    }
+
+    private fun showToast(msg: String) {
+        Toast.makeText(applicationContext, msg,
+            Toast.LENGTH_SHORT).show()
+    }
     private fun toast(msg: String) {
         Toast.makeText(baseContext, msg, Toast.LENGTH_LONG).show()
     }

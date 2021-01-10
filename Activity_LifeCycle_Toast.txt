@@ -1,0 +1,35 @@
+   override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        showToast("Main Create") 
+        //
+   }
+   override fun onStart() {
+        super.onStart()
+        showToast("Main Start")
+   }
+
+    override fun onResume() {
+        super.onResume()
+        showToast("Main Resume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        showToast("Main Pause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        showToast("Main Stop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        showToast("Main Destroy")
+    }
+
+    private fun showToast(msg: String) {
+        Toast.makeText(applicationContext, msg,
+            Toast.LENGTH_SHORT).show()
+    }

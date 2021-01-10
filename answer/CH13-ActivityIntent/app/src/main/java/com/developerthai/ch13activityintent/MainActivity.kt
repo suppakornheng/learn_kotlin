@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     private val REQ_CODE = 5555
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        showToast("Main Create")
         findViewById<Button>(R.id.button_set_font).apply {
             setOnClickListener {
                 val intent = Intent(this@MainActivity, TextSettingActivity::class.java)
@@ -30,6 +32,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+
+        showToast("Main onActivityResult")
         if (requestCode != REQ_CODE || resultCode != Activity.RESULT_OK) {
             return
         }
@@ -60,5 +64,33 @@ class MainActivity : AppCompatActivity() {
             setTypeface(null, typeFace)
         }
     }
+    override fun onStart() {
+        super.onStart()
+        showToast("Main Start")
+    }
 
+    override fun onResume() {
+        super.onResume()
+        showToast("Main Resume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        showToast("Main Pause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        showToast("Main Stop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        showToast("Main Destroy")
+    }
+
+    private fun showToast(msg: String) {
+        Toast.makeText(applicationContext, msg,
+            Toast.LENGTH_SHORT).show()
+    }
 }
