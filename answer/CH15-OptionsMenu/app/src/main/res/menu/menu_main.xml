@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.developerthai.ch15optionsmenu.MainActivity">
+
+    <item android:id="@+id/action_main"
+          android:title="หน้าหลัก"
+          app:showAsAction="never"/>
+
+    <item android:id="@+id/action_products"
+          android:title="รายการสินค้า"
+          app:showAsAction="never"/>
+
+    <item android:id="@+id/action_order_and_pay"
+          android:title="การสั่งซื้อและชำระเงิน"
+          app:showAsAction="never"/>
+</menu>
+
+
+
+
