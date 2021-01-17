@@ -1,2 +1,0 @@
-include ':app'
-rootProject.name='CH12-GuessNumber'
